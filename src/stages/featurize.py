@@ -3,7 +3,7 @@ import pandas as pd
 from typing import Text
 import yaml
 
-from src.utils.logs import get_logger
+from utils.logs import get_logger
 
 
 def featurize(config_path: Text) -> None:

@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from typing import Text
 import yaml
 
-from src.utils.logs import get_logger
+from utils.logs import get_logger
 
 
 def data_split(config_path: Text) -> None:

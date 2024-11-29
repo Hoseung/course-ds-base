@@ -3,7 +3,7 @@ from sklearn.datasets import load_iris
 from typing import Text
 import yaml
 
-from src.utils.logs import get_logger
+from utils.logs import get_logger
 
 
 def data_load(config_path: Text) -> None:

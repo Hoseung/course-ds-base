@@ -4,8 +4,8 @@ import pandas as pd
 from typing import Text
 import yaml
 
-from src.train.train import train
-from src.utils.logs import get_logger
+from train_util.train import train
+from utils.logs import get_logger
 
 
 def train_model(config_path: Text) -> None:
