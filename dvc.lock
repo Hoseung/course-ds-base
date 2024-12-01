@@ -131,7 +131,26 @@ stages:
       hash: md5
       md5: b5e45593a772fc66629488e1806505c4
       size: 1492
+    - path: models/model.joblib
+      hash: md5
+      md5: 59ddb7031dfd5b4d2fbdae2a90c8e122
+      size: 2931
     - path: src/stages/evaluate.py
       hash: md5
       md5: d7f6d245cbce7cb31b3d7150d0ba3b21
       size: 2350
+    params:
+      params.yaml:
+        evaluate:
+          reports_dir: reports
+          metrics_file: metrics.json
+          confusion_matrix_image: confusion_matrix.png
+    outs:
+    - path: reports/confusion_matrix.png
+      hash: md5
+      md5: 68d6b7886ca58f8c88b61732a0245f89
+      size: 24999
+    - path: reports/metrics.json
+      hash: md5
+      md5: d533847a0ca14ca93752b1b1f1df349e
+      size: 32

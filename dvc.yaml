@@ -30,6 +30,7 @@ stages:
     outs:
     - data/processed/test_iris.csv
     - data/processed/train_iris.csv
+  
   train:
     cmd: python src/stages/train.py --config=params.yaml
     deps:
@@ -40,8 +41,16 @@ stages:
     - train
     outs:
     - models/model.joblib
+  
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
     deps:
     - data/processed/test_iris.csv
     - src/stages/evaluate.py
+    - models/model.joblib
+    params:
+    - evaluate
+    outs:
+    - reports/metrics.json
+    - reports/confusion_matrix.png
+
